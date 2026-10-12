@@ -7,13 +7,21 @@ spec:
     namespace: directory
     server: https://kubernetes.default.svc
   project: default
+<<<<<<< HEAD
   :wq!source:
           #    directory:
           #      exclude: 'service.yml'
           #      include: '{serviceaccount.yml,service.yml}'
           #      recurse: true
+=======
+  source:
+    directory:
+      # exclude: 'service.yml'
+      # include: '{serviceaccount.yml,service.yml}'
+      recurse: true
+>>>>>>> 4eb70b5 (Remove installation directory)
     path: v03-argocd-applications/directoryOfmanifests
-    repoURL: https://github.com/devopshobbies/argocd-tutorial.git
+    repoURL: https://github.com/rezarafiei1986/argocd-tutorial.git
     targetRevision: main
   syncPolicy:
     syncOptions:
