@@ -1,10 +1,10 @@
 {
     "cluster": {
-      "owner": "mohammad",
+      "owner": "reza",
       "name": "staging",
       "path": "v03-argocd-applications/helm/nginx",
       "source_type": "helm", 
-      "address": "https://192.168.226.93:6443",
+      "address": "https://192.168.163.133:6443",
       "namespace": "staging-ns"
     }
   }

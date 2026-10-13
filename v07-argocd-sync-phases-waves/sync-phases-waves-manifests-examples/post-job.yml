@@ -10,6 +10,7 @@ spec:
       containers:
         - name: mattermost-success
           image: mattermost:final
+          imagePullPolicy: IfNotPresent  
           command: [ "python3", "mattermost_api.py"]
           env:
           - name: message
@@ -17,7 +18,8 @@ spec:
           - name: url
             value: "mattermost.local"
           - name: token
-            value: "1mh8r35js7dhpcswb4mpnkwpcw"
+            #value: "1mh8r35js7dhpcswb4mpnkwpcw"
+            value: "squ3m76jpbrgbkun8dmekfeuar"
           - name: scheme
             value: "http"
           - name: port

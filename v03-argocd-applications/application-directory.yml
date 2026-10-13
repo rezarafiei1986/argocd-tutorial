@@ -7,23 +7,21 @@ spec:
     namespace: directory
     server: https://kubernetes.default.svc
   project: default
-<<<<<<< HEAD
-  :wq!source:
-          #    directory:
-          #      exclude: 'service.yml'
-          #      include: '{serviceaccount.yml,service.yml}'
-          #      recurse: true
-=======
   source:
     directory:
       # exclude: 'service.yml'
       # include: '{serviceaccount.yml,service.yml}'
       recurse: true
->>>>>>> 4eb70b5 (Remove installation directory)
-    path: v03-argocd-applications/directoryOfmanifests
+    #path: v03-argocd-applications/directoryOfmanifests
+    path: v07-argocd-sync-phases-waves/sync-phases-waves-manifests-examples
     repoURL: https://github.com/rezarafiei1986/argocd-tutorial.git
     targetRevision: main
   syncPolicy:
     syncOptions:
+    - ApplyOutOfSyncOnly=true
     - CreateNamespace=true
+    - FailOnSharedResource=true
+    automated: 
+      prune: true
+      selfHeal: true
     

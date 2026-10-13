@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: application-directory-cluster2
+spec:
+  destination:
+    namespace: production2
+      #    server: https://kubernetes.default.svc
+    name: external-cluster
+  project: default
+  source:
+    directory:
+      # exclude: 'service.yml'
+      # include: '{serviceaccount.yml,service.yml}'
+      recurse: true
+    path: v03-argocd-applications/directoryOfmanifests
+    #path: v07-argocd-sync-phases-waves/sync-phases-waves-manifests-examples
+    repoURL: https://github.com/rezarafiei1986/argocd-tutorial.git
+    targetRevision: main
+  syncPolicy:
+    syncOptions:
+    - ApplyOutOfSyncOnly=true
+    - CreateNamespace=true
+    - FailOnSharedResource=true
+    automated: 
+      prune: true
+      selfHeal: true
+    
