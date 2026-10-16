@@ -12,7 +12,7 @@ spec:
     spec:
       project: "default"
       source:
-        repoURL: https://github.com/devopshobbies/argocd-tutorial.git
+        repoURL: https://github.com/rezarafiei1986/argocd-tutorial.git
         targetRevision: main
         path: v03-argocd-applications/helm/nginx
       destination:

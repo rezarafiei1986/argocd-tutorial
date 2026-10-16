@@ -7,7 +7,7 @@ spec:
     - matrix:
         generators:
           - git:
-              repoURL: https://github.com/devopshobbies/argocd-tutorial.git
+              repoURL: https://github.com/rezarafiei1986/argocd-tutorial.git
               revision: main
               files:
                 - path: v09-argocd-applicationSet-1/git-generator/cluster-config/**/config.json

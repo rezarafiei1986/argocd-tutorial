@@ -7,7 +7,7 @@ spec:
     - matrix:
         generators:
           - git:
-              repoURL: https://github.com/devopshobbies/argocd-tutorial.git
+              repoURL: https://github.com/rezarafiei1986/argocd-tutorial.git
               revision: main
               directories:
                 - path: v09-argocd-applicationSet-1/git-generator/resources/*
@@ -16,7 +16,7 @@ spec:
               - environment: pre-staging
                 server: https://kubernetes.default.svc
               - environment: staging
-                server: https://192.168.226.93:6443
+                server: https://192.168.163.133:6443
   template:
     metadata:
       name: '{{path.basename}}-{{environment}}'
